@@ -1,0 +1,492 @@
+{
+  "corpus": "arxiv",
+  "policy": "offline",
+  "model": null,
+  "dense": "st:BAAI/bge-small-en-v1.5",
+  "n_chunks": 2563,
+  "n_papers": 40,
+  "time": "2026-10-20 19:00",
+  "retrieval": {
+    "bm25": {
+      "recall@3": 0.898,
+      "recall@5": 0.926,
+      "recall@10": 0.954,
+      "mrr": 0.863,
+      "n": 18
+    },
+    "dense": {
+      "recall@3": 0.898,
+      "recall@5": 0.972,
+      "recall@10": 1.0,
+      "mrr": 0.921,
+      "n": 18
+    },
+    "hybrid": {
+      "recall@3": 0.926,
+      "recall@5": 0.972,
+      "recall@10": 0.972,
+      "mrr": 0.963,
+      "n": 18
+    }
+  },
+  "rows": [
+    {
+      "id": "f1",
+      "type": "factual",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": false,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": false,
+      "citation_precision": 0.0,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.29,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.58). Closest related evidence: \"[69] Title: Physics-Informed Neural Operator for Learning Partial Di\ufb00erential Equations Citations: 124 Fluid-related PDE(s): 1D Burgers\u2019, 2D incompressible Navier-Stokes Primary outcome(s): \u201cFurther, in PINO, we incorporate the Fourier neural operator (FNO) architecture which achieves orders-of-magnitude speedup over numerical solvers.\u201d Supported by \ufb01gure 8.\" [2407.07218#t66]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f2",
+      "type": "factual",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": false,
+      "keyword_score": 0.5,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.28,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.59). Closest related evidence: \"Computational e\ufb03ciency The ability to match DNS with a \u223c10 times coarser grid makes the learned interpolation solver much faster.\" [2102.01010#t18]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f3",
+      "type": "factual",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": false,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.05,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.43). Closest related evidence: \"As one can see, the PINN is only able to achieve good solutions for small values of convection coef\ufb01cient, and it fails when \u03b2 becomes larger, reaching a relative error of almost 100% for \u03b2 > 10.\" [2109.01050#t18]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f4",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 0.5,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.3333333333333333,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.05,
+      "answer": "Relevant evidence from the corpus:\n- We also propose a novel neural network architecture that is more resilient to such gradient pathologies. [2001.04536#abs]\n- We will also identify and analyze a fundamental mode of failure of such approaches that is related to numerical stiffness leading to unbalanced back-propagated gradients during model training. [2001.04536#abs]\n- Why propagation failures exist in PINNs According to the definition of Equation 5, the gradient correlation is an inner product of high-dimensional tensors, where \u2202u\u03b8 \u2202\u03b8 \u2217\u2208Rm\u00d7|\u03b8|, |\u03b8| denotes the parameter size (usually > 103) and m is the output dimension. [2502.00803#t15]\n- Going beyond the intuitive understanding, we theoretically proved that the root cause of propagation failures is the lower gradient correlation among nearby points, which can serve as a precise and quantifiable criterion for PINN failures. [2502.00803#t33]\n- Based on the above formal definition, we can further derive the root cause for propagation failures, which transforms the physical-meaning-based definition into a deep model property. [2502.00803#t15]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "f5",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.29,
+      "answer": "Relevant evidence from the corpus:\n- Here we introduce MeshGraphNets, a framework for learning mesh-based simulations using graph neural networks. [2010.03409#abs]\n- Here we introduce MESHGRAPHNETS, a framework for learning mesh-based simulations using graph neural networks. [2010.03409#t0]\n- Our approach broadens the range of problems on which neural network simulators can operate and promises to improve the efficiency of complex, scientific modeling tasks. [2010.03409#abs]\n- 6 CONCLUSION MESHGRAPHNETS are a general-purpose mesh-based method which can accurately and ef\ufb01ciently model a wide range of physical systems, generalizes well, and can be scaled up at inference time. [2010.03409#t26]\n- Published as a conference paper at ICLR 2021 LEARNING MESH-BASED SIMULATION WITH GRAPH NETWORKS Tobias Pfaff\u2217, Meire Fortunato\u2217, Alvaro Sanchez-Gonzalez\u2217, Peter W. [2010.03409#t0]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f6",
+      "type": "factual",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": false,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.03,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.56). Closest related evidence: \"A DeepONet consists of two sub-networks, one for encoding the input function at a \ufb01xed number of sensors xi, i = 1, .\" [1910.03193#t1]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f7",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.6666666666666666,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.29,
+      "answer": "Relevant evidence from the corpus:\n- CAN PHYSICS-INFORMED NEURAL NETWORKS BEAT THE FINITE ELEMENT METHOD? [2302.04107#t0]\n- We compare the proposed Physics-informed neural network model and a relevant helicity-conservative finite element method. [2204.07497#t1]\n- So far, physics-informed neural networks and the finite element method have mainly been studied in isolation of each other. [2302.04107#abs]\n- In terms of solution time and accuracy, physics-informed neural networks have not been able to outperform the finite element method in our study. [2302.04107#abs]\n- So far, physics-informed neural networks and the \ufb01nite element method have mainly been studied in isolation of each other. [2302.04107#t0]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f8",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.04,
+      "answer": "Relevant evidence from the corpus:\n- PDEBENCH comprises both code and data to benchmark the performance of novel machine learning models against both classical numerical simulations and machine learning baselines. [2210.07182#t1]\n- PDEBENCH allows researchers to extend the benchmark freely for their own purposes using a standardized API and to compare the performance of new models to existing baseline methods. [2210.07182#t1]\n- 4 A Selection of Experiments In this section, we present a selection of experiments for the PDEBENCH datasets. [2210.07182#t22]\n- In the remainder of the paper, we first address related work, introduce PDEBENCH and the underlying design choices, and discuss results for a few selected experiments. [2210.07182#t7]\n- 4.1 Baseline Setups We trained and tested the baseline emulator models, namely U-Net, FNO, and PINN with the datasets generated with the PDEs described in subsection 3.2. [2210.07182#t22]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f9",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.75,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.05,
+      "answer": "Relevant evidence from the corpus:\n- While the aforementioned works typically embed a trained model in a numerical solver, our learning approach directly infers solutions via the chosen CNN architecture. [1810.08217#t7]\n- Neural networks were also successfully used to improve turbulence models for simulations of \ufb02ows around airfoils [SMD17]. [1810.08217#t7]\n- With this study we investigate the accuracy of deep learning models for the inference of Reynolds-Averaged Navier-Stokes solutions. [1810.08217#abs]\n- Deep Learning (DL) is among the successful candidates and has recently gained popularity for fluid simulation Thuerey et al. [2212.07564#t4]\n- With this study, we investigate the accuracy of deep learning models for the inference of Reynolds-Averaged Navier-Stokes solutions. [1810.08217#t1]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "f10",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.05,
+      "answer": "Relevant evidence from the corpus:\n- PINO leverages the supervision from any available data to combine with physics constraints for better optimization landscape and thus learning accurate neural operators. [2111.03794#t21]\n- In this paper, we propose physics-informed neural operators (PINO) that combine training data and physics constraints to learn the solution operator of a given family of parametric Partial Differential Equations (PDE). [2111.03794#t1]\n- We also observe that adding more low-resolution data to training makes the optimization easier and consistently improves the accuracy of the learned operator, showing that PINO is effective and flexible in combining physics constraints and any amount of available data. [2111.03794#t36]\n- Specifically, in PINO, we combine coarse-resolution training data with PDE constraints imposed at a higher resolution. [2111.03794#t1]\n- While PINO can be trained with physics constraints Jpde only, the Jdata can provide stronger supervision than physics constraints and thus make the optimization much easier. [2111.03794#t21]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f11",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.5,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.04,
+      "answer": "Relevant evidence from the corpus:\n- The e\ufb00orts discussed in the previous section aim at providing con\ufb01dence in the application of RANS closures by identifying and quantifying uncertainties in the models at various levels. [1804.00183#t29]\n- Key principles, achievements and challenges are discussed. [1804.00183#t1]\n- Figure 5: Sketch of a data-driven turbulence model: high-fidelity data are collected from numerical simulations (with higher hierarchical level than RANS) or experiments. [2404.09074#fig5]\n- Then, we provide an introduction to data-driven approaches to RANS turbulence modeling. [2404.09074#t1]\n- A central perspective advocated in this review is that by exploiting foundational knowledge in turbulence modeling and physical constraints, data-driven approaches can yield useful predictive models. [1804.00183#t1]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "f12",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.25,
+      "answer": "Relevant evidence from the corpus:\n- Here, we list a comparison between DeepONet and FNO in Table 1 in terms of some of their properties instead of accuracy. [2111.05512#t42]\n- Table 1: Comparison between vanilla DeepONet and vanilla FNO. [2111.05512#tab1]\n- The \ufb01rst three points have been discussed in the introduction above of DeepONet and FNO. [2111.05512#t42]\n- Moreover, we employ normalization of both inputs and outputs for DeepONet and FNO and demonstrate its e\ufb00ect. [2111.05512#t10]\n- On the theoretical side, our contribution is on developing error estimation of the network size by emulating Fourier methods both for DeepONet and FNO. [2111.05512#t10]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "c1",
+      "type": "conflict",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": false,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.29,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.54). Closest related evidence: \"For both direct numerical simulation of turbulence and large eddy simulation, our results are as accurate as baseline solvers with 8-10x finer resolution in each spatial dimension, resulting in 40-80x fold computational speedups.\" [2102.01010#abs]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "c2",
+      "type": "conflict",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.05,
+      "answer": "Relevant evidence from the corpus:\n- So far, physics-informed neural networks and the finite element method have mainly been studied in isolation of each other. [2302.04107#abs]\n- In terms of solution time and accuracy, physics-informed neural networks have not been able to outperform the finite element method in our study. [2302.04107#abs]\n- CAN PHYSICS-INFORMED NEURAL NETWORKS BEAT THE FINITE ELEMENT METHOD? [2302.04107#t0]\n- We present a method whereby the finite element method is used to train physics-informed neural networks that are suitable for surrogate modeling. [2412.07126#abs]\n- In terms of solution time and accuracy, physics-informed neural networks have not been able to outperform the \ufb01nite element method in our study. [2302.04107#t1]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "c3",
+      "type": "conflict",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": false,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.04,
+      "answer": "Relevant evidence from the corpus:\n- They essentially model the PDE solution by a deep neural network and train the network\u2019s parameters to approximate the solution. [2302.04107#t5]\n- While the PDE loss is computed at any query points, the input is limited to a fixed grid in standard DeepONet [27], and its architecture is a linear method of approximation [28]. [2111.03794#t9]\n- A popular framework known as Physics-Informed Neural Network (PINN) [44] uses optimization to find the solution function of a given PDE instance. [2111.03794#t9]\n- This work has been generalised to the extended PINNs (XPINNs) [15] to allow space-time domain decomposition that can be applied to any type of PDE and enables parallelisation in training. [2302.04107#t7]\n- 2.2 Physics-informed Neural Networks The aim of physics-informed neural networks is to approximate PDE solutions using a deep neural network. [2302.04107#t17]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "u1",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.03,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.32). Closest related evidence: \"For a quantitative comparison of relative errors with the subsonic problem, we again consider the pressure coefficient Cp, the local Mach number M and the density \u03c1 for 20 linearly distributed Mach number values with M \u2208[2, 3].\" [2307.14045#t42]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "u2",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.03,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.47). Closest related evidence: \"Proper hardware backend for highly parallel GPU-accelerated quantum computing could greatly extend the HQPINN advantage.\" [2304.11247#t24]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "u3",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.03,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.23). Closest related evidence: \"Table 3: Training time and peak VRAM usage of HI-MGN, BSMS-GNN, and MeshGraphNets.\" [2608.13827#tab3]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "g1",
+      "type": "figure",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.8,
+      "tools_ok": true,
+      "tools": [
+        "find_figures",
+        "inspect_figure",
+        "search_papers"
+      ],
+      "steps": 3,
+      "seconds": 0.09,
+      "answer": "Relevant evidence from the corpus:\n- Figure 1: top: The architecture of the Fourier layer; bottom: Example \ufb02ow from Navier-Stokes. [2010.08895#fig1]\n- \u2022 The Fourier neural operator is the \ufb01rst work that learns the resolution-invariant solution operator for the family of Navier-Stokes equation in the turbulent regime, where previous graph-based neural operators do not converge. [2010.08895#t5]\n- Figure 2: Schematic of the forward structure for flux neural operator (Flux NO) The Flux Fourier Neural Operator (Flux FNO) introduced in the paper (Kim and Kang (2024a)), inspired by the numerical schemes of hyperbolic conservation laws, represents a method designed to learn the local physics of conservation laws directly through the approximation of fluxes, differing from original neural operators that predict target snapshots of solutions. [2404.16015#fig2]\n- Figure 3: Benchmark on Burger\u2019s equation, Darcy Flow, and Navier-Stokes Vore, 2014). [2010.08895#fig3]\n- Fourier neural operator is the only model among the benchmarks (FNO-2D, U-Net, TF-Net, and ResNet) that can do zero-shot super-resolution. [2010.08895#t25]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "g2",
+      "type": "figure",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "find_figures",
+        "inspect_figure",
+        "search_papers"
+      ],
+      "steps": 3,
+      "seconds": 0.07,
+      "answer": "Relevant evidence from the corpus:\n- Figure 4: (a) Rollout of our model versus ground truth on dataset AIRFOIL. [2010.03409#fig4]\n- Our main \ufb01ndings are that MESHGRAPHNETS are able to produce high-quality rollouts on all domains, outperforming particle- and grid-based baselines, while being signi\ufb01cantly faster than the ground truth simulator, and generalizing to much larger and more complex settings at test time. [2010.03409#t17]\n- Videos of rollouts, as well as comparisons, can be found at https://sites.google.com/view/ meshgraphnets. [2010.03409#t17]\n- Right: Errors of our methods for a single prediction step (1-step), 50-step rollouts, and rollout of the whole trajectory. [2010.03409#tab1]\n- A \ufb01xed connectivity radius will always oversample high-res regions, and undersample low-res regions of the mesh, leading to instabilities and high rollout errors (Figure 5b, right). [2010.03409#t23]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "a1",
+      "type": "analysis",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "run_surrogate_experiment",
+        "search_papers"
+      ],
+      "steps": 3,
+      "seconds": 30.35,
+      "answer": "Relevant evidence from the corpus:\n- We \ufb01nd (see github) that, as with the ML-based solver, DG methods are able to solve the 1D Burgers\u2019 equation at resolutions 4\u00d7 to 8\u00d7 coarser than WENO. [2407.07218#t61]\n- The ML-based solver is still able to solve the 1D Burgers\u2019 equation with 2-4\u00d7 fewer degrees of freedom compared to the DG-based method. [2407.07218#t61]\n- Fair comparison: \u2713 19 Article 19: Dong and Li [75] Title: Local extreme learning machines and domain decomposition for solving linear and nonlinear partial di\ufb00erential equations Citations: 55 Fluid-related PDE(s): 1D Helmholtz, 1D advection, 1D di\ufb00usion, 1D non-linear helmholtz, 1D Burgers\u2019, 2D Poisson. [2407.07218#t71]\n- For 1D di\ufb00usion and 1D Burgers\u2019, uses second-order backward di\ufb00erentiation formula (BDF2), an implicit timestepping method. [2407.07218#t71]\n- In this experiment, the training data for Burgers equation setting is in 32 \u00d7 25 (spatio-temporal), and the Jpde is imposed in 128 \u00d7 100 resolution. [2111.03794#t34]\nOur own experiment: 1D viscous Burgers equation experiment (surrogate vs classical solver). POD rank r=21. Best surrogate 'POD + MLP': in-dist error 15.98%, OOD error 35.55%. Coarse 32-mode solver: in-dist 0.49%, OOD 5.93%, at 10.7 ms/query vs surrogate 0.022 ms. Surrogate errors grow sharply outside the training viscosity range, while the classical solver's do not depend on any training distribution; the speed-up must be weighed against offline data-generation cost and the accuracy of an equally cheap classical baseline. [experiment:burgers_n400]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "a2",
+      "type": "analysis",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "run_surrogate_experiment",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 18.0,
+      "answer": "Relevant evidence from the corpus:\n- Due to these reproducibility issues, we caution that at present the scienti\ufb01c literature is not a reliable source for evaluating the success of ML at solving PDEs. [2407.07218#t6]\n- PDEs relate the output of a function to partial derivatives with respect to input variables (usually space and/or time). [2407.07218#t3]\n- To determine the frequency of weak baselines, we conduct a systematic review of research that uses ML to accelerate the solution of \ufb02uid-related PDEs. [2407.07218#t6]\n- 1 In recent years, there has been interest in using ML to advance research into partial di\ufb00erential equations (PDEs) [28\u201333]. [2407.07218#t3]\n- We study three concrete cases of PDEs on Burgers\u2019 Equation, Darcy\u2019s Equation, and Navier-Stokes equation. [2111.03794#t30]\nOur own experiment: 1D viscous Burgers equation experiment (surrogate vs classical solver). POD rank r=21. Best surrogate 'POD + MLP': in-dist error 15.98%, OOD error 35.55%. Coarse 32-mode solver: in-dist 0.49%, OOD 5.93%, at 11.8 ms/query vs surrogate 0.021 ms. Surrogate errors grow sharply outside the training viscosity range, while the classical solver's do not depend on any training distribution; the speed-up must be weighed against offline data-generation cost and the accuracy of an equally cheap classical baseline. [experiment:burgers_n400]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    }
+  ],
+  "e2e": {
+    "overall": {
+      "status_ok": 0.773,
+      "keyword_score": 0.529,
+      "citation_validity": 1.0,
+      "gold_cited": 0.889,
+      "citation_precision": 0.789,
+      "tools_ok": 1.0,
+      "faithfulness": null,
+      "steps": 1.591,
+      "seconds": 2.304,
+      "n": 22
+    },
+    "analysis": {
+      "status_ok": 1.0,
+      "keyword_score": 1.0,
+      "gold_cited": 1.0,
+      "tools_ok": 1.0,
+      "n": 2
+    },
+    "conflict": {
+      "status_ok": 0.667,
+      "keyword_score": 0.667,
+      "gold_cited": 0.667,
+      "tools_ok": 1.0,
+      "n": 3
+    },
+    "factual": {
+      "status_ok": 0.667,
+      "keyword_score": 0.417,
+      "gold_cited": 0.917,
+      "tools_ok": 1.0,
+      "n": 12
+    },
+    "figure": {
+      "status_ok": 1.0,
+      "keyword_score": null,
+      "gold_cited": 1.0,
+      "tools_ok": 1.0,
+      "n": 2
+    },
+    "unanswerable": {
+      "status_ok": 1.0,
+      "keyword_score": null,
+      "gold_cited": null,
+      "tools_ok": 1.0,
+      "n": 3
+    }
+  }
+}

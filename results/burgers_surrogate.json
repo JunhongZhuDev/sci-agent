@@ -1,0 +1,66 @@
+{
+  "rows": [
+    {
+      "method": "reference solver (256 modes)",
+      "err_in_mean": 0.0,
+      "err_in_std": 0.0,
+      "err_ood_mean": 0.0,
+      "cost_per_query_ms": 22.86396100750011,
+      "offline_cost_s": 0.0,
+      "note": "ground truth"
+    },
+    {
+      "method": "coarse solver (32 modes)",
+      "err_in_mean": 0.00487559984830466,
+      "err_in_std": 0.011274106894809977,
+      "err_ood_mean": 0.059285836862020866,
+      "cost_per_query_ms": 13.065027560000999,
+      "offline_cost_s": 0.0,
+      "note": "no training data needed"
+    },
+    {
+      "method": "POD + ridge (poly-2)",
+      "err_in_mean": 0.20304555717709885,
+      "err_in_std": 0.09729845212031286,
+      "err_ood_mean": 0.4572347218999564,
+      "cost_per_query_ms": 0.022559559999990597,
+      "offline_cost_s": 9.34592740000005,
+      "note": "best={'ridge__alpha': 10}; break-even after ~409 queries"
+    },
+    {
+      "method": "POD + MLP",
+      "err_in_mean": 0.1598108630251998,
+      "err_in_std": 0.07177264609411935,
+      "err_ood_mean": 0.3555261178108019,
+      "cost_per_query_ms": 0.019509179999204207,
+      "offline_cost_s": 24.913545312999986,
+      "note": "best={'mlpregressor__alpha': 0.0001, 'mlpregressor__hidden_layer_sizes': (64, 64)}; break-even after ~1090 queries"
+    },
+    {
+      "method": "POD + MLP (Keras)",
+      "err_in_mean": 0.217351989903526,
+      "err_in_std": 0.1143143147645478,
+      "err_ood_mean": 0.5064271695123467,
+      "cost_per_query_ms": 4.362448080000831,
+      "offline_cost_s": 73.95078067100008,
+      "note": "best={'width': 64, 'val_mse_std': 1.0336, 'epochs': 222}; break-even after ~3997 queries"
+    }
+  ],
+  "pod_rank": 21,
+  "summary": "1D viscous Burgers equation experiment (surrogate vs classical solver). POD rank r=21. Best surrogate 'POD + MLP': in-dist error 15.98%, OOD error 35.55%. Coarse 32-mode solver: in-dist 0.49%, OOD 5.93%, at 13.1 ms/query vs surrogate 0.020 ms. Surrogate errors grow sharply outside the training viscosity range, while the classical solver's do not depend on any training distribution; the speed-up must be weighed against offline data-generation cost and the accuracy of an equally cheap classical baseline.",
+  "plot": "results/burgers_surrogate.png",
+  "config": {
+    "n_train": 400,
+    "n_test": 50,
+    "n_ood": 40,
+    "nu_train": [
+      0.05,
+      0.3
+    ],
+    "nu_ood": [
+      0.015,
+      0.04
+    ],
+    "seed": 0
+  }
+}

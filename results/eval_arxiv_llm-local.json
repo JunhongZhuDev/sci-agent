@@ -1,0 +1,599 @@
+{
+  "corpus": "arxiv",
+  "policy": "llm:local",
+  "model": "qwen2.5:7b",
+  "dense": "st:BAAI/bge-small-en-v1.5",
+  "n_chunks": 2563,
+  "n_papers": 40,
+  "time": "2026-10-20 18:47",
+  "retrieval": {
+    "bm25": {
+      "recall@3": 0.898,
+      "recall@5": 0.926,
+      "recall@10": 0.954,
+      "mrr": 0.863,
+      "n": 18
+    },
+    "dense": {
+      "recall@3": 0.898,
+      "recall@5": 0.972,
+      "recall@10": 1.0,
+      "mrr": 0.921,
+      "n": 18
+    },
+    "hybrid": {
+      "recall@3": 0.926,
+      "recall@5": 0.972,
+      "recall@10": 0.972,
+      "mrr": 0.963,
+      "n": 18
+    }
+  },
+  "rows": [
+    {
+      "id": "f1",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.5,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 6.83,
+      "answer": "The Fourier Neural Operator (FNO) paper [2010.08895#t5] reports that the proposed architecture is able to achieve state-of-the-art results for PDE problems, but it does not explicitly provide a speedup over traditional PDE solvers. The paper [2111.03794#t17] mentions that the FNO can apply the Fast Fourier Transform (FFT) to efficiently compute the integral operator, leading to a fast architecture. However, the specific speedup is not quantified in the provided evidence.\n\nSTATUS: PARTIAL\nCONFIDENCE: low",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "id": "f2",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "high",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 6.97,
+      "answer": "The paper \"Machine learning accelerated computational fluid dynamics (2021)\" reports that learned interpolation for Large Eddy Simulation (LES) achieves an effective 8\u00d7 upscaling, corresponding to roughly a 40\u00d7 speedup relative to a baseline grid that is 8\u00d7 finer [2102.01010#t25]. This is achieved by using a coarser grid that still matches the accuracy of an advanced numerical solver running at 8\u201310\u00d7 finer resolution [2102.01010#t5].\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f3",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "high",
+      "status_ok": true,
+      "keyword_score": 0.5,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.75,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 11.17,
+      "answer": "Physics-informed neural networks (PINNs) can fail on convection problems with large convection coefficients due to difficulties in accurately predicting the solution past a certain timestep, as highlighted in [2109.01050#fig1]. This issue is exacerbated when the convection term dominates the dynamics, making it challenging for PINNs to fit the boundary conditions accurately [2109.01050#t13].\n\nTo address these failures, [2502.00803#fig1] proposes ProPINN, which introduces a new method to identify and mitigate propagation failures in PINNs. Specifically, ProPINN uses gradient correlation to pinpoint areas where the solution propagation is difficult, thereby enabling more effective training.\n\nAdditionally, [2109.01050#tab1] suggests a curriculum training approach, where the PINN is initially trained on simpler problems with lower convection coefficients before gradually moving to more complex problems. This approach can significantly improve the performance of PINNs on challenging convection problems [2109.01050#tab1].\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f4",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "high",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 8.72,
+      "answer": "Gradient pathologies in physics-informed neural networks (PINNs) can lead to training failures due to numerical stiffness, where the model struggles to satisfy the constraints imposed by the partial differential equations (PDEs) [2001.04536#abs]. These pathologies can cause the gradients to vanish or explode, making it difficult for the model to learn the correct solution.\n\nTo mitigate these issues, the authors propose several strategies:\n1. **Adaptive Time Stepping**: Adjusting the time step size during training can help manage the numerical stiffness [2001.04536#t0].\n2. **Regularization**: Adding appropriate regularization terms to the loss function can stabilize the training process [2001.04536#t0].\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f5",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.5,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 8.68,
+      "answer": "The paper \"Learning Mesh-Based Simulation with Graph Networks (2020)\" [2010.03409#t17] mentions that MeshGraphNets are significantly faster than the ground truth simulator, but it does not provide a specific speed-up factor. The paper \"HI-MeshGraphNets: Efficient and Accurate Mesh-based Physics Learning with Hierarchical Multi-scale Graph Neural Networks (2026)\" [2608.13827#fig5] reports that HI-MeshGraphNets, an extension of MeshGraphNets, reduces training time by 59.9% compared to the original MeshGraphNets. However, this does not directly translate to the speed-up factor relative to the ground truth simulator.\n\nSTATUS: PARTIAL\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f6",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "high",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 6.24,
+      "answer": "The theorem that motivates DeepONet is the universal approximation theorem of operators, which states that a neural network with a single hidden layer can approximate any nonlinear continuous operator accurately [1910.03193#t1]. DeepONet consists of two sub-networks: one for encoding the input function at a fixed number of sensors (branch net) and another for encoding the location variables (trunk net) [1910.03193#t1].\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f7",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.5,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 8.71,
+      "answer": "The paper \"Can Physics-Informed Neural Networks beat the Finite Element Method?\" [2302.04107#abs] does not explicitly mention which specific PDEs were used for the comparison. However, it states that the study compares the computational costs and approximation accuracies of physics-informed neural networks with the finite element method, without finding that the neural networks outperformed the finite element method in the experiments conducted.\n\nThe paper \"FE-PINNs: finite-element-based physics-informed neural networks for surrogate modeling\" [2412.07126#abs] focuses on using the finite element method to train physics-informed neural networks for surrogate modeling, but it does not provide details on the specific PDEs used in the comparison with the finite element method.\n\nSTATUS: PARTIAL\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f8",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.6666666666666666,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 9.1,
+      "answer": "PDEBench is a benchmark for evaluating machine learning methods in the context of scientific machine learning, particularly for partial differential equations (PDEs) [2210.07182#t2]. It aims to provide a more holistic understanding of learning methods and identify challenging tasks for recent ML methods [2210.07182#t0].\n\nRegarding baseline models, the paper \"Weak baselines and reporting biases lead to overoptimism in machine learning for fluid-related partial differential equations\" [2407.07218#t87] mentions PhiFlow, a finite volume method-based solver, as a baseline for comparison. This baseline uses an iterative conjugate gradient solver on a 128 \u00d7 128 \u00d7 64 grid. However, the specific models evaluated in PDEBench are not detailed in the provided evidence.\n\nSTATUS: PARTIAL\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f9",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "high",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 6.37,
+      "answer": "In the work by Thuerey et al., the neural network architecture used for inferring Reynolds-averaged Navier-Stokes solutions around airfoils is based on the U-Net architecture [1810.08217#t20]. This architecture is known for its effectiveness in tasks such as image translation and is characterized by its bowtie structure, which translates spatial information into extracted features using convolutional layers. Additionally, skip-connections are introduced to ensure that this information is available in the output layers for inferring the solution.\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f10",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "high",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 6.73,
+      "answer": "The Physics-Informed Neural Operator (PINO) combines training data and physics constraints by leveraging both coarse-resolution training data and high-resolution physics constraints. PINO can be trained with physics constraints \\( J_{\\text{pde}} \\) only, but using training data \\( J_{\\text{data}} \\) provides stronger supervision, making the optimization process more efficient. The combination of these two sources of information helps to improve the optimization landscape and leads to more accurate learning of the solution operator for partial differential equations (PDEs) [2111.03794#t21].\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f11",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 7.35,
+      "answer": "The paper \"Turbulence Modeling in the Age of Data\" [1804.00183#t0] discusses challenges in data-driven RANS turbulence modeling, particularly focusing on the systematic use of data to inform turbulence models and quantify uncertainties. It mentions that while recent efforts aim to provide confidence in the application of RANS closures by identifying and quantifying uncertainties, there is a need to improve overall prediction accuracy using data-driven techniques [1804.00183#t29]. The paper also highlights the use of data to build new, calibrated models, which is crucial for reducing model uncertainties [1804.00183#t13].\n\nSTATUS: SUPPORTED\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "f12",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 9.98,
+      "answer": "The comprehensive and fair comparison of DeepONet and FNO, as presented in the paper \"A comprehensive and fair comparison of two neural operators (with practical extensions) based on FAIR data\" [2111.05512#t42], highlights several key differences:\n\n- **Input and Output Domains**: DeepONet can predict solutions at any location, whereas FNO is restricted to the same mesh as the input function.\n- **Training Requirements**: FNO requires full-field observation data, while DeepONet is more flexible, though POD-DeepONet still needs full-field data for computing POD modes.\n- **Discretization of Output Function**: FNO discretizes the output function, limiting its prediction to the mesh, whereas DeepONet can predict at arbitrary grid points.\n\nThe paper also notes that DeepONet was theoretically justified from the start, based on the theorem of Chen & Chen [2], while FNO's theoretical foundation was more recent and limited to invariant kernels.\n\nSTATUS: SUPPORTED\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "c1",
+      "type": "conflict",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": false,
+      "keyword_score": 0.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 9.6,
+      "answer": "Several papers suggest that machine learning (ML) solvers for fluid PDEs can deliver significant speedups. For instance, [2102.01010#t27] estimates that speed-ups in the range of 10\u00b3\u201310\u2074 may be possible for 3D simulations, indicating substantial reductions in computational cost. However, the exact magnitude of speedups can vary depending on the problem and the specific ML approach used. [2110.02085#t4] highlights that while ML can enhance CFD, it is important to ensure that uncertainties are identified and quantified. The potential for large speedups is also noted in [2110.02085#t31], which discusses the energy consumption challenges in large-scale simulations and suggests that ML can be an enabler for more efficient operation of HPC facilities.\n\nSTATUS: SUPPORTED\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "c2",
+      "type": "conflict",
+      "status": "PARTIAL",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 10.85,
+      "answer": "The paper \"Can Physics-Informed Neural Networks beat the Finite Element Method?\" [2302.04107#abs] suggests that, in their current form, physics-informed neural networks (PINNs) have not outperformed the finite element method (FEM) in terms of solution time and accuracy. However, the authors note that PINNs can be faster in evaluating the solved PDE in some experiments. Another paper, \"FE-PINNs: finite-element-based physics-informed neural networks for surrogate modeling\" [2412.07126#abs], proposes a method that integrates FEM with PINNs, leveraging the inverse isoparametric map of FEM to train neural networks for surrogate modeling. This approach shows reasonable accuracy in testing scenarios with linear boundary-value problems.\n\nThe evidence indicates that while PINNs have shown promise in certain applications, they have not yet replaced FEM for forward problems. The integration of FEM with PINNs might offer a more robust solution, but further research is needed to fully evaluate their performance and applicability.\n\nSTATUS: PARTIAL\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "c3",
+      "type": "conflict",
+      "status": "CONFLICTING",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": false,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 9.93,
+      "answer": "The reliability of Physics-Informed Neural Networks (PINNs) for training on any Partial Differential Equation (PDE) is not universally guaranteed. The paper \"Can Physics-Informed Neural Networks beat the Finite Element Method?\" [2302.04107#t17] notes that PINNs use automatic differentiation and do not rely on discretization, making them suitable for approximating PDE solutions through random sampling. However, \"ProPINN: Demystifying Propagation Failures in Physics-Informed Neural Networks\" [2502.00803#t7] highlights that PINNs can face propagation failures, especially for interior points where direct supervision for model outputs is limited. Additionally, \"Physics-Informed Neural Operator for Learning Partial Differential Equations\" [2111.03794#t9] points out that PINNs can fail in multi-scale dynamic PDE systems due to challenging optimization landscapes and sensitivity to hyper-parameter selection.\n\nSTATUS: CONFLICTING\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "u1",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 10.17,
+      "answer": "The papers do not directly report a drag coefficient for a hypersonic re-entry capsule at Mach 25. However, they discuss related metrics and experiments:\n\n- [2307.14045#t42] discusses the calculation of relative errors for various quantities, including the density and local Mach number, but does not provide specific drag coefficients.\n- [2309.00583#fig3] shows a cost-accuracy trade-off analysis for the drag coefficient, indicating that the Geometry-Informed Neural Operator (GINO) model is significantly faster than the OpenFOAM solver, but the exact drag coefficient value is not reported.\n- [2212.07564#tab3] and [2212.07564#t25] focus on relative errors and mean squared errors for drag and lift coefficients, but again, specific values are not provided for a Mach 25 re-entry capsule.\n\nSTATUS: INSUFFICIENT\nCONFIDENCE: low",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "id": "u2",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 16.46,
+      "answer": "The provided papers do not directly address the use of quantum annealing hardware for finite element mesh partitioning. Instead, they discuss the application of machine learning, particularly graph neural networks (GNNs), in simulating computational fluid dynamics (CFD) and mesh-based physics learning.\n\nOne paper, \"HI-MeshGraphNets: Efficient and Accurate Mesh-based Physics Learning with Hierarchical Multi-scale Graph Neural Networks (2026)\" [2608.13827#abs], discusses the use of GNNs for simulating physics on large, high-fidelity meshes. It mentions the limitations of flat message passing in GNNs, which can become inefficient for long-range interactions. However, it does not mention quantum annealing hardware.\n\nAnother paper, \"Hybrid quantum physics-informed neural networks for simulating computational fluid dynamics in complex shapes (2023)\" [2304.11247#abs], discusses the use of hybrid quantum machine learning models for simulating fluid dynamics. It mentions that quantum models can outperform classical ones but does not specifically address mesh partitioning.\n\nGiven the current corpus, there is no direct evidence on which quantum annealing hardware is best for finite element mesh partitioning. The papers focus more on the application of machine learning techniques, particularly GNNs, for simulating complex physical systems.\n\nSTATUS: INSUFFICIENT\nCONFIDENCE: low",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "u3",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": null,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": false,
+      "tools": [],
+      "steps": 1,
+      "seconds": 1.53,
+      "answer": "The corpus does not contain specific information on the energy consumption of training MeshGraphNets. This topic is not covered in the available papers.\n\nSTATUS: INSUFFICIENT\nCONFIDENCE: low",
+      "faithfulness": null
+    },
+    {
+      "id": "g1",
+      "type": "figure",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "find_figures"
+      ],
+      "steps": 2,
+      "seconds": 7.0,
+      "answer": "The figure comparing models on the Navier-Stokes equation is Figure 3 from the paper \"Fourier Neural Operator for Parametric Partial Differential Equations\" [2010.08895#fig3]. This figure benchmarks the performance of different models including a state-of-the-art neural network architecture (FCN), an operator method using PCA (PCANN), the original graph neural operator (GNO), and the multipole graph neural operator (MGNO) on the Navier-Stokes equation. The results likely show the accuracy or error of these models in solving the Navier-Stokes equation, highlighting the strengths and weaknesses of each approach.\n\nSTATUS: SUPPORTED\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "g2",
+      "type": "figure",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 0.5,
+      "gold_cited": false,
+      "citation_precision": 0.0,
+      "tools_ok": false,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 7.49,
+      "answer": "The figure comparing predicted and ground-truth simulation rollouts in MeshGraphNets, as shown in Fig. 8 of the paper \"HI-MeshGraphNets: Efficient and Accurate Mesh-based Physics Learning with Hierarchical Multi-scale Graph Neural Networks\" [citation removed: not in retrieved evidence], illustrates the limitations of conventional flat message passing. The contours highlight that the prediction errors in the bottom-right region are consistent with the limited long-range information propagation, despite using 28 message-passing blocks. This figure demonstrates the challenges in accurately predicting physical fields on a mesh, especially in regions with complex interactions [2608.13827#tab5].\n\nSTATUS: SUPPORTED\nCONFIDENCE: medium",
+      "faithfulness": 1.0
+    },
+    {
+      "id": "a1",
+      "type": "analysis",
+      "status": "UNVERIFIED",
+      "confidence": "low",
+      "status_ok": false,
+      "keyword_score": 1.0,
+      "citation_validity": null,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "run_surrogate_experiment"
+      ],
+      "steps": 2,
+      "seconds": 20.26,
+      "answer": "The experiment on the 1D viscous Burgers equation with 100 training samples shows that a POD-MLP surrogate outperforms the coarse classical solver in both in-distribution and out-of-distribution scenarios. Specifically, the POD-MLP surrogate achieves a relative L2 error of 97.172% \u00b1 7.444% in-distribution and 100.798% out-of-distribution, compared to the coarse solver's 31.753% \u00b1 12.137% in-distribution and 27.777% out-of-distribution. The POD-MLP surrogate operates at 0.078 ms/query, while the coarse solver operates at 10.521 ms/query. However, the surrogate's accuracy degrades sharply outside the training viscosity range, while the classical solver's accuracy remains consistent. The break-even point for the surrogate is after approximately 206 queries, indicating that the classical solver is more cost-effective for a wide range of viscosity values.\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": null
+    },
+    {
+      "id": "a2",
+      "type": "analysis",
+      "status": "UNVERIFIED",
+      "confidence": "low",
+      "status_ok": false,
+      "keyword_score": 1.0,
+      "citation_validity": null,
+      "gold_cited": false,
+      "citation_precision": null,
+      "tools_ok": false,
+      "tools": [
+        "run_surrogate_experiment"
+      ],
+      "steps": 2,
+      "seconds": 20.79,
+      "answer": "The experiment on the 1D viscous Burgers equation using a pseudo-spectral reference solver, a coarse classical solver, and surrogate models (POD+ridge and POD+MLP) provides insights into the weak-baselines critique of ML for fluid PDEs. The coarse classical solver, with only 10 modes, achieved an in-distribution relative L2 error of 36.02% and an out-of-distribution (OOD) error of 32.78%, at a query cost of 10.6 ms. In contrast, the best surrogate model, 'POD + ridge (poly-2)', had an in-distribution error of 47.90% and an OOD error of 727.96%, at a query cost of 0.026 ms. The classical solver's errors did not depend on the training distribution, while the surrogate errors grew sharply outside the training viscosity range. The speed-up of the surrogates must be weighed against the offline data-generation cost and the accuracy of the equally cheap classical baseline.\n\nSTATUS: SUPPORTED\nCONFIDENCE: high",
+      "faithfulness": null
+    }
+  ],
+  "e2e": {
+    "overall": {
+      "status_ok": 0.864,
+      "keyword_score": 0.735,
+      "citation_validity": 0.974,
+      "gold_cited": 0.833,
+      "citation_precision": 0.78,
+      "tools_ok": 0.864,
+      "faithfulness": 0.965,
+      "steps": 1.955,
+      "seconds": 9.588,
+      "n": 22
+    },
+    "analysis": {
+      "status_ok": 0.0,
+      "keyword_score": 1.0,
+      "gold_cited": 0.0,
+      "tools_ok": 0.5,
+      "n": 2
+    },
+    "conflict": {
+      "status_ok": 0.667,
+      "keyword_score": 0.667,
+      "gold_cited": 0.667,
+      "tools_ok": 1.0,
+      "n": 3
+    },
+    "factual": {
+      "status_ok": 1.0,
+      "keyword_score": 0.708,
+      "gold_cited": 1.0,
+      "tools_ok": 1.0,
+      "n": 12
+    },
+    "figure": {
+      "status_ok": 1.0,
+      "keyword_score": null,
+      "gold_cited": 0.5,
+      "tools_ok": 0.5,
+      "n": 2
+    },
+    "unanswerable": {
+      "status_ok": 1.0,
+      "keyword_score": null,
+      "gold_cited": null,
+      "tools_ok": 0.667,
+      "n": 3
+    }
+  },
+  "robustness": {
+    "summary": {
+      "abstain_or_hedge_when_gold_removed": 0.417,
+      "conflict_detected_when_injected": 0.667
+    },
+    "missing_evidence": [
+      {
+        "id": "f1",
+        "status": "PARTIAL",
+        "confidence": "low",
+        "hedged": true
+      },
+      {
+        "id": "f2",
+        "status": "INSUFFICIENT",
+        "confidence": "low",
+        "hedged": true
+      },
+      {
+        "id": "f3",
+        "status": "SUPPORTED",
+        "confidence": "medium",
+        "hedged": false
+      },
+      {
+        "id": "f4",
+        "status": "SUPPORTED",
+        "confidence": "medium",
+        "hedged": false
+      },
+      {
+        "id": "f5",
+        "status": "PARTIAL",
+        "confidence": "medium",
+        "hedged": true
+      },
+      {
+        "id": "f6",
+        "status": "SUPPORTED",
+        "confidence": "high",
+        "hedged": false
+      },
+      {
+        "id": "f7",
+        "status": "SUPPORTED",
+        "confidence": "medium",
+        "hedged": false
+      },
+      {
+        "id": "f8",
+        "status": "PARTIAL",
+        "confidence": "medium",
+        "hedged": true
+      },
+      {
+        "id": "f9",
+        "status": "PARTIAL",
+        "confidence": "low",
+        "hedged": true
+      },
+      {
+        "id": "f10",
+        "status": "SUPPORTED",
+        "confidence": "high",
+        "hedged": false
+      },
+      {
+        "id": "f11",
+        "status": "SUPPORTED",
+        "confidence": "medium",
+        "hedged": false
+      },
+      {
+        "id": "f12",
+        "status": "SUPPORTED",
+        "confidence": "medium",
+        "hedged": false
+      }
+    ],
+    "injected_conflict": [
+      {
+        "id": "f1",
+        "status": "PARTIAL",
+        "detected": true,
+        "cited_counter": true
+      },
+      {
+        "id": "f2",
+        "status": "PARTIAL",
+        "detected": true,
+        "cited_counter": true
+      },
+      {
+        "id": "f5",
+        "status": "PARTIAL",
+        "detected": false,
+        "cited_counter": false
+      }
+    ]
+  }
+}

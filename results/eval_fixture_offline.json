@@ -1,0 +1,318 @@
+{
+  "corpus": "fixture",
+  "policy": "offline",
+  "dense": "lsa",
+  "n_chunks": 12,
+  "n_papers": 6,
+  "time": "2026-10-19 17:51",
+  "retrieval": {
+    "bm25": {
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "n": 8
+    },
+    "dense": {
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "n": 8
+    },
+    "hybrid": {
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "n": 8
+    }
+  },
+  "rows": [
+    {
+      "id": "xf1",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.6666666666666666,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.01,
+      "answer": "Relevant evidence from the corpus:\n- Figure 2: Relative error versus runtime for the spectral operator and the pseudo-spectral solver on 2D turbulence. [fx-fno#fig2]\n- On two-dimensional turbulent flow at viscosity 1e-4 the operator is about 1000 times faster than the pseudo-spectral solver used to generate training data, while reaching a relative error of 2 percent. [fx-fno#abs]\n- We propose a spectral neural operator that learns the solution operator of the Navier-Stokes equations. [fx-fno#abs]\n- A message-passing graph neural network learns mesh-based simulation for cloth, aerodynamics and structural mechanics. [fx-gnn#abs]\n- It runs 10 to 100 times faster than the simulator it was trained on and supports adaptive remeshing. [fx-gnn#abs]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "xf2",
+      "type": "factual",
+      "status": "PARTIAL",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.5,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.0,
+      "answer": "Relevant evidence from the corpus:\n- Curriculum regularization, starting from small convection coefficients, and sequence-to-sequence training in time reduce the error by one to two orders of magnitude. [fx-fail#t1]\n- Physics-informed networks fail to train for convection problems with large convection coefficients. [fx-fail#abs]\n- Physics-informed networks may be useful for inverse problems or very high dimension. [fx-pinn#t1]\n- We compare physics-informed neural networks with the finite element method for the Poisson and Allen-Cahn equations. [fx-pinn#abs]\n- The finite element method is faster and more accurate in solving time; physics-informed networks do not beat finite elements in our tests, but a trained network evaluates new points quickly. [fx-pinn#abs]\nSTATUS: PARTIAL\nCONFIDENCE: low"
+    },
+    {
+      "id": "xf3",
+      "type": "factual",
+      "status": "CONFLICTING",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.25,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.01,
+      "answer": "Evidence from the corpus points in different directions:\n- A message-passing graph neural network learns mesh-based simulation for cloth, aerodynamics and structural mechanics. [fx-gnn#abs]\n- It runs 10 to 100 times faster than the simulator it was trained on and supports adaptive remeshing. [fx-gnn#abs]\n- The finite element method is faster and more accurate in solving time; physics-informed networks do not beat finite elements in our tests, but a trained network evaluates new points quickly. [fx-pinn#abs]\n- Data-driven closures trained on high-fidelity data can correct model-form errors, but must respect Galilean invariance and realizability. [fx-rans#t0]\n- On two-dimensional turbulent flow at viscosity 1e-4 the operator is about 1000 times faster than the pseudo-spectral solver used to generate training data, while reaching a relative error of 2 percent. [fx-fno#abs]\nSTATUS: CONFLICTING\nCONFIDENCE: low"
+    },
+    {
+      "id": "xf4",
+      "type": "factual",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 1.0,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.0,
+      "answer": "Relevant evidence from the corpus:\n- Reynolds-averaged Navier-Stokes (RANS) models rely on closures for the Reynolds stress. [fx-rans#t0]\n- Data-driven closures trained on high-fidelity data can correct model-form errors, but must respect Galilean invariance and realizability. [fx-rans#t0]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "xc1",
+      "type": "conflict",
+      "status": "CONFLICTING",
+      "confidence": "low",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.01,
+      "answer": "Evidence from the corpus points in different directions:\n- Most studies compare against weak baselines: when the numerical solver is run at a resolution that matches the learned model's accuracy, reported speedups shrink by one to three orders of magnitude, and several learned solvers are slower. [fx-crit#abs]\n- We review published comparisons between machine learning PDE solvers and numerical methods for fluid problems. [fx-crit#abs]\n- On two-dimensional turbulent flow at viscosity 1e-4 the operator is about 1000 times faster than the pseudo-spectral solver used to generate training data, while reaching a relative error of 2 percent. [fx-fno#abs]\n- We propose a spectral neural operator that learns the solution operator of the Navier-Stokes equations. [fx-fno#abs]\n- We compare physics-informed neural networks with the finite element method for the Poisson and Allen-Cahn equations. [fx-pinn#abs]\nSTATUS: CONFLICTING\nCONFIDENCE: low"
+    },
+    {
+      "id": "xc2",
+      "type": "conflict",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "search_papers"
+      ],
+      "steps": 2,
+      "seconds": 0.01,
+      "answer": "Relevant evidence from the corpus:\n- The finite element method is faster and more accurate in solving time; physics-informed networks do not beat finite elements in our tests, but a trained network evaluates new points quickly. [fx-pinn#abs]\n- We compare physics-informed neural networks with the finite element method for the Poisson and Allen-Cahn equations. [fx-pinn#abs]\n- Physics-informed networks may be useful for inverse problems or very high dimension. [fx-pinn#t1]\n- Physics-informed networks fail to train for convection problems with large convection coefficients. [fx-fail#abs]\n- A message-passing graph neural network learns mesh-based simulation for cloth, aerodynamics and structural mechanics. [fx-gnn#abs]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "xu1",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": 1.0,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.0,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.20). Closest related evidence: \"Table 1: Reported versus baseline-corrected speedup of learned solvers.\" [fx-crit#tab1]\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "xu2",
+      "type": "unanswerable",
+      "status": "INSUFFICIENT",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": null,
+      "citation_validity": null,
+      "gold_cited": null,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "search_papers"
+      ],
+      "steps": 1,
+      "seconds": 0.0,
+      "answer": "The indexed corpus does not contain sufficient evidence to answer this question (query-term coverage of retrieved evidence: 0.00).\nSTATUS: INSUFFICIENT\nCONFIDENCE: medium"
+    },
+    {
+      "id": "xg1",
+      "type": "figure",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": 0.6666666666666666,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "find_figures",
+        "inspect_figure",
+        "search_papers"
+      ],
+      "steps": 4,
+      "seconds": 0.01,
+      "answer": "Relevant evidence from the corpus:\n- Figure 2: Relative error versus runtime for the spectral operator and the pseudo-spectral solver on 2D turbulence. [fx-fno#fig2]\n- Figure 2: Relative error versus runtime for the spectral operator and the pseudo-spectral solver on 2D turbulence. [fx-fno#fig2]\n- On two-dimensional turbulent flow at viscosity 1e-4 the operator is about 1000 times faster than the pseudo-spectral solver used to generate training data, while reaching a relative error of 2 percent. [fx-fno#abs]\n- We propose a spectral neural operator that learns the solution operator of the Navier-Stokes equations. [fx-fno#abs]\n- method | reported speedup | corrected speedup\noperator A | 1000x | 7x\nPINN B | 100x | 0.1x\nGNN C | 50x | 4x [fx-crit#tab1]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    },
+    {
+      "id": "xt1",
+      "type": "table",
+      "status": "SUPPORTED",
+      "confidence": "medium",
+      "status_ok": true,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": true,
+      "citation_precision": null,
+      "tools_ok": true,
+      "tools": [
+        "extract_numeric_claims",
+        "find_figures",
+        "inspect_figure",
+        "search_papers"
+      ],
+      "steps": 4,
+      "seconds": 0.01,
+      "answer": "Relevant evidence from the corpus:\n- method | reported speedup | corrected speedup\noperator A | 1000x | 7x\nPINN B | 100x | 0.1x\nGNN C | 50x | 4x [fx-crit#tab1]\n- method | reported speedup | corrected speedup\noperator A | 1000x | 7x\nPINN B | 100x | 0.1x\nGNN C | 50x | 4x [fx-crit#tab1]\n- Most studies compare against weak baselines: when the numerical solver is run at a resolution that matches the learned model's accuracy, reported speedups shrink by one to three orders of magnitude, and several learned solvers are slower. [fx-crit#abs]\n- The speedup is measured against the high-resolution solver at its native resolution. [fx-fno#t1]\nSTATUS: SUPPORTED\nCONFIDENCE: medium"
+    }
+  ],
+  "e2e": {
+    "overall": {
+      "status_ok": 1.0,
+      "keyword_score": 1.0,
+      "citation_validity": 1.0,
+      "gold_cited": 1.0,
+      "citation_precision": 0.617,
+      "tools_ok": 1.0,
+      "faithfulness": null,
+      "steps": 2.0,
+      "seconds": 0.006,
+      "n": 10
+    },
+    "conflict": {
+      "status_ok": 1.0,
+      "keyword_score": 1.0,
+      "gold_cited": 1.0,
+      "tools_ok": 1.0,
+      "n": 2
+    },
+    "factual": {
+      "status_ok": 1.0,
+      "keyword_score": 1.0,
+      "gold_cited": 1.0,
+      "tools_ok": 1.0,
+      "n": 4
+    },
+    "figure": {
+      "status_ok": 1.0,
+      "keyword_score": 1.0,
+      "gold_cited": 1.0,
+      "tools_ok": 1.0,
+      "n": 1
+    },
+    "table": {
+      "status_ok": 1.0,
+      "keyword_score": 1.0,
+      "gold_cited": 1.0,
+      "tools_ok": 1.0,
+      "n": 1
+    },
+    "unanswerable": {
+      "status_ok": 1.0,
+      "keyword_score": null,
+      "gold_cited": null,
+      "tools_ok": 1.0,
+      "n": 2
+    }
+  },
+  "robustness": {
+    "summary": {
+      "abstain_or_hedge_when_gold_removed": 1.0,
+      "conflict_detected_when_injected": 1.0
+    },
+    "missing_evidence": [
+      {
+        "id": "xf1",
+        "status": "INSUFFICIENT",
+        "confidence": "medium",
+        "hedged": true
+      },
+      {
+        "id": "xf2",
+        "status": "INSUFFICIENT",
+        "confidence": "medium",
+        "hedged": true
+      },
+      {
+        "id": "xf3",
+        "status": "INSUFFICIENT",
+        "confidence": "medium",
+        "hedged": true
+      },
+      {
+        "id": "xf4",
+        "status": "INSUFFICIENT",
+        "confidence": "medium",
+        "hedged": true
+      }
+    ],
+    "injected_conflict": [
+      {
+        "id": "xf1",
+        "status": "CONFLICTING",
+        "detected": true,
+        "cited_counter": true
+      },
+      {
+        "id": "xf3",
+        "status": "CONFLICTING",
+        "detected": true,
+        "cited_counter": true
+      }
+    ]
+  }
+}
