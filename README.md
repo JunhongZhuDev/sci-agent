@@ -61,8 +61,6 @@ eval/
 tests/                     16 tests (pytest), synthetic fixture corpus
 examples/                  example questions and outputs
 docs/ARCHITECTURE.md       architecture and design choices
-docs/PRESENTATION.md       slide plan + likely questions; docs/SciAgent_presentation.pdf = slides
-docs/AI_USAGE.md           how coding agents were used to build this
 ```
 
 ## Example
